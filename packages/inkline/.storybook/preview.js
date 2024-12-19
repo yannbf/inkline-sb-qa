@@ -16,7 +16,7 @@ export const withInklineTheme = ({ themes, defaultTheme }) => {
 
     return (story, context) => {
         const selectedTheme = pluckThemeFromContext(context);
-        const { themeOverride } = useThemeParameters();
+        const { themeOverride } = useThemeParameters(context);
 
         currentTheme.value = themeOverride || selectedTheme || defaultTheme;
 
@@ -72,4 +72,4 @@ export const parameters = {
         }
     }
 };
-export const tags = ['autodocs'];
+// export const tags = ['autodocs'];
